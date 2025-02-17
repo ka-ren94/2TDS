@@ -1,6 +1,6 @@
 package com.example.senai.DataBase;
 
-import com.example.senai.Model.Produto;
+import com.senai.crudSemBanco.model.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,8 @@ public class BancoDeProdutos {
     }
 
     // Remove um produto pelo ID
-    public boolean delete(int id) {
-        return produtos.removeIf(p -> p.getIdProduto() == id);
+    public boolean excluirProduto(Integer idProduto) {
+
+        return bc.delete(idProduto);
     }
 }
